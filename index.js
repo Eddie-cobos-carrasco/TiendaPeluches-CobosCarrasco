@@ -1,9 +1,11 @@
 //prompt saludo sus
 
 let saludoNombre = prompt('Ingrese su nombre');
-alert ('Bienvenido '+saludoNombre)
+alert('Bienvenido ' + saludoNombre)
 
 //objetos
+
+const peluches = [];
 
 const peluche1 = {
     nombre: 'chisyoso',
@@ -25,6 +27,20 @@ const peluche3 = {
     stock: false,
     precio: 3
 }
+
+//array(push)
+
+peluches.push(peluche1);
+peluches.push(peluche2);
+peluches.push(peluche3);
+
+//metodo-busqueda
+
+function buscarPeluchePorNombre(nombre) {
+    return peluches.find(peluche => peluche.nombre === nombre);
+}
+const pelucheEncontrado = buscarPeluchePorNombre('chisyoso');
+console.log(pelucheEncontrado);
 
 //condicion
 
