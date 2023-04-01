@@ -1,7 +1,8 @@
 //prompt saludo sus
 
-let saludoNombre = prompt('Ingrese su nombre');
-alert('Bienvenido ' + saludoNombre)
+//let saludoNombre = prompt('Ingrese su nombre');
+//alert('Bienvenido ' + saludoNombre)
+//no se usa mas el prompt
 
 //objetos
 
@@ -58,3 +59,33 @@ function sumar() {
 //console log
 
 console.log(sumar());
+
+//localstorage
+
+localStorage.setItem('pelucheNombre','chisyoso')
+
+//json
+
+const peluche3Json = JSON.stringify(peluche3);
+
+console.log(peluche3Json);
+localStorage.setItem('peluche3Json',peluche3Json)
+
+let infoPeluche3Storage = localStorage.getItem('peluche3Json')
+console.log(JSON.parse(infoPeluche3Storage))
+
+//dom
+
+const js1 = document.querySelector('#js1')
+js1.innerText = 'js1 modificado'
+const h1Subtitulo = document.createElement ('h2')
+js1.append(h1Subtitulo)
+h1Subtitulo.innerText = 'hola entendi lo que es dom'
+const susInsertar = document.querySelector('#susInsertar')
+
+//evento
+const eventoSus = document.querySelector('#eventoSus')
+function clickFunction(){
+    console.log('click')
+}
+eventoSus.addEventListener('click',clickFunction)
